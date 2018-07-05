@@ -1,0 +1,511 @@
+html{
+    height: 100%;
+}
+
+body{
+   min-height:100%;
+   margin:0;padding:0;
+}
+
+header{
+	width: 100%;
+	height: 60px; 
+	border-bottom: 2px solid #b2cf87;
+    background-color:rgba(221,240,237,0.3);
+}
+
+main{
+	height: 1200px;
+    margin-bottom: 10px;
+}
+
+.contain{
+    min-height:100%;
+    height: auto;
+    margin-bottom:10px;
+}
+
+
+/*导航栏logo部分*/
+.hea_logo{
+	height: 100%;
+	position: relative;
+	text-emphasis: transparent;
+	letter-spacing: 10px;
+}
+
+.hea_logo h1{
+	background: transparent url(../img/LOGO.png) center no-repeat;
+	background-size: 50% 100%;
+	margin: 15px auto;
+	padding: 0;
+	display: block;
+	white-space: nowrap;
+	height: 30px;
+}
+
+
+/*导航栏菜单部分nav*/
+.nav{
+	height:58px; 
+	padding: 0;
+	margin:0 auto; 
+	width:100%;
+}
+
+.nav>a{
+	width: 25%;
+	font-size:20px; 
+	float:left;  
+    color:#b2cf87; 
+    text-decoration:none;
+    position: relative; 
+    font-weight:bold; 
+    overflow: hidden;
+}
+
+.nav>a:hover{
+    text-decoration: none;
+}
+
+
+.nav>a li{
+	padding:0px 30px; 
+	text-align: center; 
+	color:#b2cf87; 
+	height: 100%; 
+	line-height:58px;
+	text-decoration:none;
+}
+
+/* 导航栏登录部分 */
+.hea_login{
+	height: 100%;
+	font-size: 16px;
+	font-family: 宋体;
+
+}
+
+.log_a{
+	width: 50%;
+	margin:0 auto;
+}
+
+.log_a a{
+	line-height: 60px;
+	font-style: none;
+	color: #b2cf87;
+	margin-right: 15px;
+}
+
+.log_a a:hover{
+	line-height: 60px;
+	font-style: none;
+	color: #b2cf87;
+	font-weight: bold;
+	text-decoration:none;
+}
+
+/* 轮播部分 */
+.carrousel{
+	height: 10%;
+    width: 60%;
+    margin: 30px 20% 30px 20%;
+}
+
+.slider_four_in_line {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: 0 auto;
+    user-select: none;
+}
+
+.slider_four_in_line > * {
+    transition: ease all 1s;
+    overflow: hidden;
+}
+
+.slider_four_in_line .hidden {
+    opacity: 0;
+    z-index: 0;
+    top: 0px;
+    left: 50%;
+}
+
+.slider_four_in_line .active,
+.slider_four_in_line .next1,
+.slider_four_in_line .next2,
+.slider_four_in_line .next3,
+.slider_four_in_line .next4,
+.slider_four_in_line .prev1 {
+    position: absolute;
+    width: 24%;
+    height: 100%;
+    top: 0px;
+    left: 25%;
+    z-index: 10;
+    margin: 0 0.5%;
+}
+
+.slider_four_in_line .next1 {
+    left: 50%;
+}
+
+.slider_four_in_line .next2 {
+    left: 75%;
+}
+
+.slider_four_in_line .next3 {
+    width: 0%;
+    left: 100%;
+    z-index: 0;
+    opacity: 0;
+}
+
+.slider_four_in_line .next4 {
+    left: 100%;
+    width: 0%;
+    z-index: 0;
+    opacity: 0;
+}
+
+.slider_four_in_line .prev1 {
+    position: absolute;
+    width: 24%;
+    height: 100%;
+    top: 0px;
+    left: 0%;
+    z-index: 10;
+    opacity: 1;
+}
+
+.slider_four_in_line .prev2,
+.slider_four_in_line .prev3,
+.slider_four_in_line .prev4 {
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    top: 0px;
+    left: 0%;
+    z-index: 0;
+    opacity: 0;
+}
+
+.slider_four_in_line .active img,
+.slider_four_in_line .next1 img,
+.slider_four_in_line .next2 img,
+.slider_four_in_line .next3 img,
+.slider_four_in_line .next4 img,
+.slider_four_in_line .prev1 img {
+    max-height: 150px;
+}
+
+
+.next_button,
+.prev_button {
+    position: absolute;
+    left: 100% !important;
+    top: 50% !important;
+    margin: -15px 0 0 -25px !important;
+    width: 50px !important;
+    height: 50px !important;
+    border: 1px solid #add5a2 !important;
+    background: #fff !important;
+    opacity: 0.5 !important;
+    z-index: 5000 !important;
+    cursor: pointer;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%;
+    
+}
+
+.prev_button {
+    position: absolute;
+    left: 0% !important;
+}
+
+.next_button:hover,
+.prev_button:hover {
+    opacity: 1 !important;
+}
+.next_button:after,
+.prev_button:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1px;
+    height: 1px;
+    margin-top: -10px;
+}
+
+.next_button:after {
+    border-left: 15px solid #add5a2;
+    border-right: 15px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent;
+    margin-left: -5px;
+}
+
+.prev_button:after {
+    border-right: 15px solid #add5a2;
+    border-left: 15px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent;
+    margin-left: -25px;
+}
+
+
+div.slider > div:not(.nav_indicators):not(.next_button):not(.prev_button) {
+    box-shadow: 0px 1px 3px #add5a2;
+    border: 1px solid #add5a2;
+    background: #fff;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 150px;
+}
+
+
+/* 三列布局包围部分 */
+.outer{
+    width: 100%;
+    margin-top: 30px;
+    border-top: 1px solid #b2cf87;
+    position: relative;
+    height: 90%;
+}
+
+/* 公告部分 */
+.out_bb{
+    position: absolute;
+    width: 20%;
+    margin-right: 2%;
+    height: auto;
+    margin-top: 20px;
+    margin-left: 5%;
+}
+
+.bb_1,
+.lost_1,
+.found_1{
+    width: 100%;
+    height: auto;
+    /* background: linear-gradient(to right bottom,rgba(183,208,122,0.8),rgba(0,0,0,0)); */
+    /* background-size: 10% 24px;
+    background:transparent url(../img/Salt.png) top no-repeat; */
+    border-radius: 5px;
+    border:1px solid #b2cf87;
+    padding-bottom: 20px;
+}
+
+.bb_1 h2,
+.lost_1 h2,
+.found_1 h2{
+    font-family: "宋体";
+    font-size: 20px;
+    color: #253d24;
+    line-height: 30px;
+    text-indent: 5px;
+}
+
+.bb_2{
+    width: 80%;
+    height: 100px;
+    margin:0 10% 10px 10%;
+    border:1px solid #253d24;
+    font-size: 18px;
+    color: #b2cf87;
+}
+
+/* 失物招领部分 */
+.out_lost{
+    position: absolute;
+    left: 27%;
+    width: 30%;
+    margin-right: 2%;
+    height: 982px;
+    margin-top: 20px;
+}
+
+.lost_1 a,
+.found_1 a{
+    text-decoration: none;
+    font-size: 15px;
+    color:#253d24;
+}
+
+.lost_1 > a:nth-child(3),
+.found_1 > a:nth-child(3){
+    text-decoration: none;
+    font-size: 18px;
+    color:#253d24;
+    float: right;
+    margin-right: 10%;
+}
+
+.lost_1 a:hover,
+.found_1 a:hover{
+    text-decoration: none;
+}
+
+.lost_1 > a:nth-child(3):hover,
+.found_1 > a:nth-child(3):hover{
+    text-decoration: none;
+    font-size: 18px;
+    color:#253d24;
+}
+
+
+/* 寻物启事部分 */
+.out_found{
+   position: absolute;
+   left: 59%;
+   width: 30%;
+   height: 982px;
+   margin-top: 20px;
+}
+
+/* footer部分 */
+.footer{
+    clear: both;
+    width: 100%;
+    height: 100px;
+    border-top:2px solid #b2cf87;
+    background-color:rgba(221,240,237,0.5);
+    padding:20px 0; 
+}
+
+.footer p{
+    width: 50%;
+    margin:0 auto;
+    font-size: 15px;
+    line-height:30px; 
+    text-align: center;
+}
+
+
+
+
+/*lost-detail页面*/
+/*found-detail页面*/
+
+
+/*主体部分*/
+.contain > div > table > tbody > tr:nth-child(7) > td:nth-child(2) img{
+	width: 50%;
+	height: auto;
+}
+
+/*personl-revise页面*/
+
+/*主体部分*/
+.personal{
+	padding-top:6%;
+	padding-left: 12%;
+	padding-right: 12%;
+	height: 500px;
+}
+
+
+/* 登录页面 */
+
+
+/* 登录页面头部 */
+.hea_si{
+    width: 500px;
+    height: 100%;
+    margin:0 auto;
+}
+
+.hea_si h2{
+   width: 196px;
+   background: transparent url(../img/LOGO.png) center no-repeat;
+   background-size: 100% 100%;
+   margin: 0;
+   padding: 0;
+   display: block;
+   white-space: nowrap;
+   height: 60px;
+   font-size: 30px;
+   line-height: 60px;
+   font-family: "宋体";
+   font-weight: bolder;
+   text-indent: 210px;
+   color: #b2cf87;
+}
+
+/* 登录页面中部 */
+.sign{
+    height: 700px;
+}
+
+.sign_h{
+    height: 100%;
+}
+
+.sign_out{
+    width: 100%;
+    margin-top: 10%;
+    border-radius: 5px;
+    border: 2px solid #b2cf87;
+    background-color:rgba(221,240,237,0.3);
+    overflow: hidden;
+}
+
+.sign_left{
+    float: left;
+    height: 66%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    padding:0 5%;
+    width: 46%;
+    color: #388E3C;
+    border-right: 1px dashed #b2cf87;
+}
+
+.sign_left ul{
+    list-style:none; /* 去掉ul前面的符号 */
+    margin: 35px; /* 与外界元素的距离为0 */
+    padding: 0px; /* 与内部元素的距离为0 */
+    width: auto; /* 宽度根据元素内容调整 */
+}
+
+.sign_left li{
+   float:left; /* 向左漂移，将竖排变为横排 */
+   width: 50%;
+}
+
+.sign_left a,
+.sign_left a:hover{
+    color: #6bce96;
+    text-decoration: none;
+}
+
+.sign_right{
+    float: right;
+    height: 66%;
+    margin-top: 10%;
+    margin-bottom: 10%; 
+    width: 50%;
+    color: #388E3C;
+}
+
+.sign_right h2{
+    font-size:24px;
+    text-indent: 20px;
+}
+
+
+/* 提交寻找失物信息页面 
+   提交寻找失主信息页面*/
+.f_out{
+    width: 100%;
+    height: 60%;
+    margin-top: 10%;
+}
+
+.f_out input[type="text"]{
+    height: 30px;
+}
